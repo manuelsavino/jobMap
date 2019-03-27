@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      #map {
+        height: 100%;
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background: #2b2b2b;
+      }
+      a[href^="http://maps.google.com/maps"] {
+        display: none !important;
+      }
+      a[href^="https://maps.google.com/maps"] {
+        display: none !important;
+      }
+      .image {
+        margin: 0 5px;
+      }
+      .gmnoprint a,
+      .gmnoprint span,
+      .gm-style-cc {
+        display: none;
+      }
+      .gmnoprint div {
+        background: none !important;
+      }
+      .logo {
+        position: fixed;
+        bottom: 5px;
+        left: 10px;
+        width: 5%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <div class="logo">
+      <img src="./assets/mapLogo.png" />
+    </div>
+    <script src="./assets/map.js"></script>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDK9dPj_xDUSeBmonXiuVZnXnHCgWluv-w&callback=initMap"
+      async
+      defer
+    ></script>
+  </body>
+</html>
